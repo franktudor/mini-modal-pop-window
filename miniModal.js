@@ -35,7 +35,7 @@ $(document).ready(function () {
 	
 	minMod_stripper();
 	
-    function xyz() {
+    function unwrapOverlays() {
         var imgUrl = $(this).attr('data-link');
         window.open(imgUrl, '_blank');
         $('#minMod_achi').unwrap('<div id="minMod_lightbox">').addClass('minMod_newHidden');
@@ -43,7 +43,7 @@ $(document).ready(function () {
         $('#minMod_lightbox_close').remove();
     }
 
-    function abc() {
+    function checkinputs() {
         var checkinputs = true;
         $("input").each(function () {
             var val = $(this).val();
@@ -57,12 +57,12 @@ $(document).ready(function () {
     }
     
     $('#minMod_noThanks').on('click', function () {
-        xyz();
+        unwrapOverlays();
     });
     
     $('#minMod_thanks').on('click', function () {
-        if (abc()) {
-            xyz();
+        if (checkinputs()) {
+            unwrapOverlays();
         }
     });
 
